@@ -1,117 +1,103 @@
 <!-- Copie este código e cole no seu README.md -->
 
-# Store App 
+# About App 
 
+The Store App is an application aimed at managing a wide variety of products, providing users with the ability to register, edit, and delete products in an intuitive and efficient manner. With robust features, the app offers a comprehensive experience for organizing and accessing information about products of interest.
+
+## Features
+
+1.  <strong>Product Registration:</strong>
+    -   Allows users to register complete details about their products, including name, description, price, and associated images.
+2.  <strong>Filters and Sorting:</strong>
+    -   Offers advanced filtering features, enabling users to categorize products by date, price, minimum, and maximum value. Additionally, it allows alphabetical sorting, facilitating searches.
+3.  <strong>Image Management:</strong>
+    -   Enables the association of individual images with each product, providing a complete and detailed view of the registered items.
+4.  <strong>Product Editing and Deletion:</strong>
+    -   Offers the flexibility to edit or delete information about already registered products, ensuring the maintenance of accurate and up-to-date data.
+5.  <strong>Updated Product List:</strong>
+    -   Maintains a dynamic product list, providing users with a consolidated view of all registered items.
   
-O Store App é uma aplicação voltada para o gerenciamento de uma ampla variedade de produtos, proporcionando aos usuários a capacidade de cadastrar, editar e excluir produtos de forma intuitiva e eficiente. Com funcionalidades robustas, o aplicativo oferece uma experiência completa para organizar e acessar informações sobre os produtos de interesse.
+6.  <strong>Authentication and Data Persistence:</strong>
+    -   Implements a secure login system, allowing users to access the app with ease. After the first login, the app stores the login state, providing a continuous user experience without the need for repeated logins.
 
-## Funcionalidades
+## Architecture
 
-1.  <strong>Cadastro de Produtos:</strong>
-    -   Permite aos usuários registrar detalhes completos sobre seus produtos, incluindo nome, descrição, preço e imagens associadas.
-2.  <strong>Filtros e Ordenação:</strong>
-    -   Oferece recursos avançados de filtragem, possibilitando aos usuários categorizar produtos por data, preço, valor mínimo e máximo. Além disso, permite a ordenação alfabética, facilitando a busca.
-3.  <strong>Gestão de Imagens:</strong>
-    -   Permite a associação de imagens individuais a cada produto, proporcionando uma visualização completa e detalhada dos itens cadastrados.
-4.  <strong>Edição e Exclusão de Produtos:</strong>
-    -   Oferece a flexibilidade de editar ou excluir informações sobre produtos já cadastrados, garantindo a manutenção de dados precisos e atualizados.
-5.  <strong>Lista Atualizada de Produtos:</strong>
-    -   Mantém uma lista dinâmica de produtos, proporcionando aos usuários uma visão consolidada de todos os itens cadastrados.
-6.  <strong>Autenticação e Persistência de Dados:</strong>
-    -   Implementa um sistema de login seguro, permitindo que o usuário acesse o aplicativo com facilidade. Após o primeiro login, o aplicativo armazena o estado de login, proporcionando uma experiência de uso contínua, sem a necessidade de login a cada acesso.
+The Store App adopts the Clean Dart architecture, a proposal from the Flutter community based on Clean Architecture. This architectural approach promotes the creation of structured, modular, and maintainable code, ensuring efficient scalability and testability.
 
-## Arquitetura
-
-O Store App adota a arquitetura Clean Dart, uma proposta da comunidade Flutter baseada no Clean Architecture. Essa abordagem arquitetônica promove a criação de um código estruturado, modular e de fácil manutenção, proporcionando escalabilidade e testabilidade eficientes.
-
-### Camadas da Arquitetura Clean Dart:
+### Layers of the Clean Dart Architecture:
 
 1.  <strong>Presentation:</strong>
-    -   Responsável pela camada de apresentação da aplicação, incluindo UI, widgets, e controle de estado das telas. Aqui, o Presenter gerencia a lógica de apresentação e a comunicação com a camada de domínio.
+    -   Responsible for the application's presentation layer, including UI, widgets, and screen state management. Here, the Presenter manages the presentation logic and communicates with the domain layer.
 2.  <strong>Domain:</strong>
-    -   Contém as regras de negócio e a lógica de domínio da aplicação. As entidades (entities) representam objetos de domínio, e os use cases definem as operações que podem ser realizadas na aplicação.
+    -   Contains the business rules and domain logic of the application. Entities represent domain objects, and use cases define the operations that can be performed within the application.
 3.  <strong>Data:</strong>
-    -   Encarregada de realizar a comunicação com fontes de dados externas. Divide-se em:
-        -   <strong>Datasources:</strong> Representa a origem dos dados, podendo ser APIs, banco de dados, etc.
-        -   <strong>DTOs (Data Transfer Objects):</strong> Modelos utilizados para transferir dados entre camadas.
-        -   <strong>Repositories:</strong> Abstrações que definem como os dados são obtidos e armazenados.
+    -   Responsible for communication with external data sources. It is divided into:
+        -   <strong>Datasources:</strong> Represents the source of data, which can be APIs, databases, etc.
+        -   <strong>DTOs (Data Transfer Objects):</strong> Models used to transfer data between layers.
+        -   <strong>Repositories:</strong> Abstractions that define how data is retrieved and stored.
 
-### Imagem Representativa da Arquitetura Clean Dart:
+### Representative Image of the Clean Dart Architecture:
 
 ![Clean Dart Architecture](https://miro.medium.com/v2/resize:fit:1400/1*07Y2uX-7HYQa1syEzoXukA.png)
 
-Na imagem acima, podemos visualizar a estrutura básica da arquitetura Clean Dart. Cada camada tem uma responsabilidade clara, com a seta indicando a direção permitida de dependência. Isso garante que as camadas mais internas (como Domain) não dependam das camadas mais externas (como Data).
+In the image above, we can see the basic structure of the Clean Dart architecture. Each layer has a clear responsibility, with the arrow indicating the allowed direction of dependency. This ensures that the innermost layers (like Domain) do not depend on the outer layers (like Data).
 
-<strong>Principais Benefícios da Arquitetura Clean Dart:</strong>
+<strong>Main Benefits of the Clean Dart Architecture:</strong>
 
--   <strong>Modularidade:</strong> Facilita a separação de responsabilidades e a criação de módulos independentes.
--   <strong>Testabilidade:</strong> As camadas isoladas permitem testes unitários eficazes e simplificados.
--   <strong>Manutenção:</strong> A estrutura organizada facilita a identificação e correção de problemas.
--   <strong>Escalabilidade:</strong> Permite o crescimento do projeto de forma sustentável e controlada.
+-   <strong>Modularity:</strong> Facilitates the separation of responsibilities and the creation of independent modules.
+-   <strong>Testability:</strong> Isolated layers enable effective and simplified unit testing.
+-   <strong>Maintainability:</strong> The organized structure makes it easier to identify and fix issues.
+-   <strong>Scalability:</strong> Allows the project to grow in a sustainable and controlled manner.
 
-<h1>Principais Ferramentas Utilizadas no App</h1>
+<h1>Main Tools Used in the App:</h1>
 
-<p>O Store App utiliza uma variedade de ferramentas e serviços para oferecer uma experiência completa aos usuários. Aqui estão as principais ferramentas incorporadas no desenvolvimento do aplicativo:</p>
+<p>The Store App uses a variety of tools and services to provide a complete experience for users. Here are the main tools incorporated in the development of the app:</p>
 
 <h2>Firebase Authentication:</h2>
-
-<p>O serviço de autenticação do Firebase é utilizado para permitir que os usuários realizem o cadastro e login de forma segura. Com essa ferramenta, garantimos um processo de autenticação confiável e eficiente.</p>
+<p>The Firebase Authentication service is used to enable users to register and log in securely. With this tool, we ensure a reliable and efficient authentication process.</p>
 
 <h2>Firebase Firestore Database:</h2>
+<p>Firestore, also part of the Firebase ecosystem, is used as the database to store data related to the products added by users. It provides a real-time NoSQL database solution, offering speed and scalability.</p>
 
-<p>O Firestore, também parte do ecossistema Firebase, é utilizado como banco de dados para armazenar dados relacionados aos produtos adicionados pelos usuários. Ele oferece uma solução de banco de dados NoSQL em tempo real, proporcionando agilidade e escalabilidade.</p>
 
 <h2>Firebase Storage:</h2>
-
-<p>Para armazenar e recuperar imagens associadas aos produtos cadastrados, utilizamos o Firebase Storage. Essa ferramenta permite o gerenciamento eficiente de recursos multimídia, contribuindo para uma experiência visual rica no aplicativo.</p>
+<p>To store and retrieve images associated with the registered products, we use Firebase Storage. This tool enables efficient management of multimedia resources, contributing to a rich visual experience within the app.</p>
 
 <h2>Shared Preferences:</h2>
+<p>The Shared Preferences library is used for local storage of user login data. This tool enables the persistence of essential information, such as the user's login state, even after the app is closed.</p> 
 
-<p>A biblioteca Shared Preferences é empregada para o armazenamento local de dados do login do usuário. Essa ferramenta possibilita a persistência de informações essenciais, como o estado de login do usuário, mesmo após o fechamento do aplicativo.</p>
-
-<h2>Principais Bibliotecas:</h2>
-
+<h2>Main Libraries:</h2>
 <h3>firebase_storage:</h3>
-
-<ul>
-  <li>Versão: ^11.5.6</li>
-  <li>Descrição: Biblioteca para interação com o Firebase Storage, facilitando o upload e download de arquivos.</li>
+<ul> 
+  <li>Version: ^11.5.6</li> <li>Description: Library for interacting with Firebase Storage, facilitating file upload and download.</li> 
 </ul>
-
-<h3>firebase_auth:</h3>
-
-<ul>
-  <li>Versão: 4.15.3</li>
-  <li>Descrição: Biblioteca que fornece métodos para autenticação de usuários usando o Firebase Authentication.</li>
-</ul>
-
-<h3>shared_preferences:</h3>
-
-<ul>
-  <li>Versão: ^2.2.2</li>
-  <li>Descrição: Biblioteca para persistência de dados simples chave-valor no Flutter. Utilizada para armazenar informações locais, como o estado de login.</li>
-</ul>
-
+<h3>firebase_auth:</h3> 
+<ul> <li>Version: 4.15.3</li>
+  <li>Description: Library that provides methods for user authentication using Firebase Authentication.</li>
+</ul> 
+<h3>shared_preferences:</h3> 
+<ul> 
+  <li>Version: ^2.2.2</li>
+  <li>Description: Library for simple key-value data persistence in Flutter. Used to store local information such as login state.</li> 
+</ul> 
 <h3>flutter:</h3>
-
-<ul>
-  <li>Versão: sdk '>=2.0.0 <3.0.0'</li>
-  <li>Descrição: Framework de desenvolvimento para criar aplicativos nativos compilados para dispositivos móveis, web e desktop a partir de uma única base de código.</li>
-</ul>
-
-<p>Essas ferramentas desempenham um papel fundamental na implementação de recursos-chave do Store App, contribuindo para a segurança, eficiência e usabilidade do aplicativo. Ao integrar essas tecnologias, buscamos oferecer uma solução completa e confiável para a gestão de produtos variados pelos usuários.</p>
-
-## Telas
+<ul> 
+  <li>Version: sdk '>=2.0.0 <3.0.0'</li> 
+    <li>Description: Development framework for creating natively compiled applications for mobile, web, and desktop from a single codebase.</li>
+  </ul>
+    <p>These tools play a crucial role in implementing key features of the Store App, contributing to the security, efficiency, and usability of the application. By integrating these technologies, we aim to offer a comprehensive and reliable solution for managing various products by users.</p>
+    
+## Screens
 
 <h1 align="center">
     <a href="https://imgur.com/007uH7C"><img src="https://github.com/lineprado98/store/blob/develop/assets/design_screen.png" title="source: imgur.com" /></a>
     <br />
 </h1>
 
-## Como Executar
+## Steps to Run:
 
 ```bash
-git clone https://github.com/seu-usuario/store-app.git
+git clone https://github.com/user-name/store-app.git
 cd store-app
 flutter pub get
 flutter run
